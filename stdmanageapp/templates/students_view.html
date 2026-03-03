@@ -1,0 +1,45 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STUDENTS VIEW</title>
+    <link rel="stylesheet" href="{% static 'css/students_view.css'  %}">
+    <link rel="icon" type="images/png" href="{% static 'images/std.png'%}">
+</head>
+<body>
+    <a href="{% url 'sign_out' %}">LOGOUT</a>
+    <div>
+        <h1>STUDENTS VIEW</h1>
+        <h2>WELCOME  {{username}}</h2>
+    </div>
+    <table>
+        <tr>
+            <th>NAME</th>
+            <th>ROLL NO</th>
+            <th>TAMIL MARK</th>
+            <th>ENGLISH MARK</th>
+            <th>MATHS MARK</th>
+            <th>SCIENCE MARK</th>
+            <th>SOCIAL MARK</th>
+            
+
+        </tr>
+  
+        {% for student in students%}
+          <tr>
+                <td>{{student.student_name}}</td>
+                <td>{{student.roll_no}}</td>
+                <td>{{student.tamil_mark}}</td>
+                <td>{{student.english_mark}}</td>   
+                <td>{{student.maths_mark}}</td>      
+                <td>{{student.science_mark}}</td>       
+                <td>{{student.social_mark}}</td>   
+                       
+          </tr>
+        {% endfor %}
+    </table>     
+  
+</body>
+</html>

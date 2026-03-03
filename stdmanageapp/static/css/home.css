@@ -1,0 +1,65 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Full screen layout */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+}
+
+/* Main Flex */
+.main-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* LEFT SIDE (75%) */
+.image-section {
+    width: 75%;
+}
+
+.image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   /* Important: image covers fully */
+}
+
+/* RIGHT SIDE (25%) */
+.content-section {
+    width: 25%;
+    background: linear-gradient(to bottom, #4e73df, #1cc88a);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+/* Title */
+.content-section h1 {
+    color: white;
+    margin-bottom: 40px;
+    letter-spacing: 3px;
+}
+
+/* Buttons */
+.content-section a {
+    width: 100%;
+    text-align: center;
+    margin: 15px 0;
+    padding: 12px;
+    background-color: white;
+    color: #4e73df;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.content-section a:hover {
+    background-color: #f2f2f2;
+}

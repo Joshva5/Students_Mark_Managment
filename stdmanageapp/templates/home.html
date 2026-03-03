@@ -1,0 +1,27 @@
+{% load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <link rel="stylesheet" href="{% static 'css/home.css'%}">
+    <link rel="icon" type="images/png" href="{% static 'images/school_icon.png'%}">
+</head>
+<body>
+     <div class="main-container">
+
+        <div class="image-section">
+            <img src="{% static 'images/school.webp' %}" alt="No image">
+        </div>
+
+        <div class="content-section">
+            <h1>STUDENTS MARKLIST MANAGEMENT</h1>
+            <a href="{% url 'student_register' %}">STUDENT REGISTRATION</a>
+            <a href="{% url 'login_view' %}">LOGIN</a>
+        </div>
+    </div>
+    
+</body>
+</html>

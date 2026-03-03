@@ -1,0 +1,73 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Body */
+body {
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    min-height: 100vh;
+    padding: 40px;
+    text-align: center;
+}
+
+/* Logout Button */
+a {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    background: #ff4b5c;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+a:hover {
+    background: #d63031;
+}
+
+/* Headings */
+h1 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #f1f1f1;
+    margin-bottom: 30px;
+}
+
+/* Table */
+table {
+    width: 85%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Table Header */
+th {
+    background: #007bff;
+    color: white;
+    padding: 12px;
+}
+
+/* Table Data */
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Row Hover Effect */
+tr:hover {
+    background: #f2f2f2;
+}

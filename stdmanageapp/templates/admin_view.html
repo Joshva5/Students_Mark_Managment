@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMIN VIEW</title>
+    <link rel="stylesheet" href="{% static 'css/admin_view.css' %}">
+    <link rel="icon" type="images/png" href="{% static 'images/admin_icon.png'%}">
+</head>
+<body>
+    <a href="{% url 'admin_dashboard' %}">BACK</a>
+    <h1>ADMIN VIEW</h1>
+    <h2>WELCOME  {{user.username}}</h2>
+    <div>
+        {% for message in messages %}
+            <p>{{ message }}</p>
+        {% endfor %}
+    </div>
+  
+    <table>
+        <tr>
+            <th>NAME</th>
+            <th>ROLL NO</th>
+            <th>TAMIL MARK</th>
+            <th>ENGLISH MARK</th>
+            <th>MATHS MARK</th>
+            <th>SCIENCE MARK</th>
+            <th>SOCIAL MARK</th>
+            <th>TOTAL</th>
+            <th>PERCENTAGE</th>
+            <th>UPDATE</th>
+            <th>DELETE</th>
+
+        </tr>
+  
+        {% for student in students%}
+          <tr>
+                <td>{{student.student_name}}</td>
+                <td>{{student.roll_no}}</td>
+                <td>{{student.tamil_mark}}</td>
+                <td>{{student.english_mark}}</td>   
+                <td>{{student.maths_mark}}</td>      
+                <td>{{student.science_mark}}</td>       
+                <td>{{student.social_mark}}</td>   
+                <td>{{student.total}}</td>        
+                <td>{{student.percentage}}</td> 
+                <td><a href="{% url 'update_view' student.id %}">UPDATE</a></td> 
+                <td> <a href="{% url 'delete' student.id %}">DELETE</a></td>      
+          </tr>
+        {% endfor %}
+    </table>     
+   
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html>

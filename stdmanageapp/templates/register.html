@@ -1,0 +1,28 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STDUENTS REGISTRATION</title>
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
+    <link rel="icon" type="images/png" href="{% static 'images/std.png'%}">
+    
+</head>
+<body>
+    <div>
+        <h1> STDUENTS REGISTRATION</h1>
+        
+        <form action="" method="post">
+            {% csrf_token%}
+            <input type="text" name="fullname" placeholder="FULL NAME"><br><br>
+            <input type="text" name="username" placeholder="USERNAME"><br><br>
+            <input type="password" name="password" placeholder="PASSWORD"><br><br>
+            <button>REGISTER</button><br><br>
+            <a href="{% url 'login_view' %}">ALREADY REGISTERED</a>
+        </form>
+    </div>
+    
+</body>
+</html>

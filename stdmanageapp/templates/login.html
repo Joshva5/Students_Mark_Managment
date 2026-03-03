@@ -1,0 +1,28 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+    <link rel="stylesheet" href="{% static 'css/login.css'%}">
+     <link rel="icon" type="images/png" href="{% static 'images/login_icon.png'%}">
+</head>
+<body>
+    <div class="login-container">
+        <h1>LOGIN</h1>
+        <form action="" method="post">
+            {% csrf_token%}
+        
+            <input type="text" name="username" placeholder="USERNAME" required><br><br>
+            <input type="password" name="password" id="" placeholder="PASSWORD" required><br><br>
+            <button type="submit">LOGIN</button>
+            <a href="{% url 'student_register' %}" class="register-link">REGISTERATION</a>
+        </form>
+    </div>
+</body>
+</html>
+
+
+ 

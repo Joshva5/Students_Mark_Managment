@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPDATE MARKS</title>
+    <link rel="stylesheet" href="{% static 'css/update.css' %}">
+    <link rel="icon" type="images/png" href="{% static 'images/admin_icon.png'%}">
+</head>
+<body>
+    <div>
+        <h1>UPDATE MARKS</h1>
+    {% if student %}
+        <h2>{{student.student_name}} ---- {{student.roll_no}}</h2>
+    {% endif %}
+    </div>
+    
+    <form action="" method="post">
+        {% csrf_token%}
+        <input type="text" name="student_name" placeholder="STUDENT NAME" value="{{student.student_name}}"><br><br>
+        <input type="number" name="roll_no" placeholder="ROLL NO"  value="{{student.roll_no}}"><br><br>
+        <input type="text" name="tamil_mark" placeholder="TAMIL MARK"  value="{{student.tamil_mark}}"><br><br>
+        <input type="text" name="english_mark" placeholder="ENGLISH MARK"  value="{{student.english_mark}}"><br><br>
+        <input type="text" name="maths_mark" placeholder="MATHS MARK"  value="{{student.maths_mark}}"><br><br>
+        <input type="text" name="science_mark" placeholder="SCIENCE MARK"  value="{{student.science_mark}}"><br><br>
+        <input type="text" name="social_mark" placeholder="SOCIAL MARK"  value="{{student.social_mark}}"><br><br>
+        <input type="number" name="total" placeholder="TOTAL"  value="{{student.total}}"><br><br>
+        <input type="number" name="percentage" placeholder="PERCENTAGE"  value="{{student.percentage}}"><br><br>
+        <button value="save">UPDATE</button> <button type="reset">RESET</button>
+    </form>
+
+    
+</body>
+</html>

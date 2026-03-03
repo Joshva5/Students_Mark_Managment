@@ -1,0 +1,89 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Body */
+body {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+}
+
+/* Header Section */
+body > div {
+    text-align: center;
+    margin-bottom: 30px;
+    color: white;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-weight: normal;
+}
+
+/* Form Container */
+form {
+    background: white;
+    padding: 40px;
+    width: 450px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* Inputs */
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 5px rgba(102, 126, 234, 0.5);
+}
+
+/* Buttons */
+button {
+    width: 48%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Update Button */
+button[value="save"] {
+    background: #28a745;
+    color: white;
+}
+
+button[value="save"]:hover {
+    background: #218838;
+}
+
+/* Reset Button */
+button[type="reset"] {
+    background: #dc3545;
+    color: white;
+    float: right;
+}
+
+button[type="reset"]:hover {
+    background: #c82333;
+}
